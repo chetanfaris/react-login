@@ -5,6 +5,7 @@ import './App.css';
 import { UserProvider } from './providers/userProvider';
 import { Login } from './pages/login';
 import { Dashboard } from './pages/dashboard';
+import { PrivateRoute } from './routes/routes';
 
 export function App(): JSX.Element {
     return (
@@ -12,12 +13,15 @@ export function App(): JSX.Element {
             <Router>
                 <div className="App">
                     <Switch>
-                        <Route exact path="/">
+                        <Route path="/login">
                             <Login />
                         </Route>
-                        <Route path="/dashboard">
+                        <PrivateRoute path="/">
                             <Dashboard />
-                        </Route>
+                        </PrivateRoute>
+                        <PrivateRoute path="/dashboard">
+                            <Dashboard />
+                        </PrivateRoute>
                     </Switch>
                 </div>
             </Router>

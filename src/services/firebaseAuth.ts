@@ -4,12 +4,12 @@ import { auth } from './firebase';
 
 const googleProvider = new firebase.auth.GoogleAuthProvider();
 
-export const signInWithGoogle = (): void => {
-    auth.signInWithPopup(googleProvider)
-        .then((res) => {
-            // console.log(res.user);
-        })
-        .catch((error) => {
-            // console.log(error.message);
-        });
+export const signInWithGoogle = async (): Promise<firebase.User | null> => {
+    return auth.signInWithPopup(googleProvider).then((res) => {
+        return res.user;
+    });
+};
+
+export const logOut = (): void => {
+    auth.signOut();
 };

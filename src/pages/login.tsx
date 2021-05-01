@@ -1,9 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Redirect } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { signInWithGoogle } from '../services/firebaseAuth';
 import { UserContext } from '../providers/userProvider';
 
 export function Login(): JSX.Element {
+    const history = useHistory();
     const user = useContext(UserContext);
     const [redirect, setredirect] = useState<string | null>(null);
 
@@ -13,7 +14,7 @@ export function Login(): JSX.Element {
         }
     }, [user]);
     if (redirect) {
-        <Redirect to={redirect} />;
+        history.replace(redirect);
     }
     return (
         <div className="login-buttons">

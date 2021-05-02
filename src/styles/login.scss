@@ -1,0 +1,114 @@
+.logo {
+    width: 166px;
+    height: 84px;
+    margin-top: 24px;
+}
+
+.banner {
+    position: absolute;
+    left: 40%;
+    top: 0px;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 100;
+}
+
+.container {
+    width: 40%;
+    margin-left: 80px !important;
+    margin-right: 10px !important;
+}
+
+.login-container {
+    max-width: 400px !important;
+    margin-left: 10% !important;
+}
+
+.login-title {
+    margin-top: 105px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 31px;
+    line-height: 130%;
+
+    display: flex;
+    text-align: start;
+    letter-spacing: 0.02em;
+}
+
+.email-field {
+    display: flex !important;
+    margin-top: 40px !important;
+}
+
+.password-field {
+    display: flex !important;
+    margin-top: 16px !important;
+}
+
+.forgot-password {
+    margin-top: 12px !important;
+    float: right;
+}
+
+.login-button {
+    width: 100%;
+    height: 48px;
+    margin-top: 40px !important;
+}
+
+.or {
+    display: inline-flex;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 12px;
+    color: #d9d9d9;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.divider {
+    width: 45%;
+    margin-top: 13px !important;
+}
+
+.divider-left {
+    margin-right: 12px !important;
+}
+
+.divider-right {
+    margin-left: 12px !important;
+}
+
+.social-buttons {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-evenly;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    line-height: 150% !important;
+    margin-top: 12px !important;
+}
+
+.google-button {
+    margin-right: 4px !important;
+    font-size: 12px !important;
+    height: 45px;
+    vertical-align: center;
+}
+
+.facebook-button {
+    margin-left: 4px !important;
+    font-size: 12px !important;
+    height: 45px;
+}
+
+.MuiButton-startIcon {
+    height: 16px;
+    width: 16px;
+}
+.MuiButton-label {
+    padding-top: 1px;
+}

@@ -2,7 +2,13 @@ import LocalizedStrings from 'react-localization';
 
 export const Messages = new LocalizedStrings({
     en: {
-        editDescription: 'Edit src/App.tsx and save to reload.',
-        learnReact: 'Learn React'
+        loginTitle: 'Log in to your account',
+        emailFieldPlaceholder: 'E-mail*',
+        passwordFieldPlaceholder: 'Password*',
+        forgotPasswordButtonTitle: 'Forgot your password ?',
+        loginButtonTitle: 'Login',
+        loginPageOrTitle: 'OR',
+        googleLoginButtonTitle: 'Login via Google',
+        facebookLoginButtonTitle: 'Login via Facebook'
     }
 });

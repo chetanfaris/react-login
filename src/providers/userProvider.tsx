@@ -3,6 +3,7 @@ import firebase from 'firebase/app';
 import { auth } from '../services/firebase';
 import { getUser } from '../services/cloudFirestore';
 import { User } from '../Models/user';
+import { logOut } from '../services/firebaseAuth';
 
 export const UserContext = createContext<void | User | null>(null);
 
@@ -19,7 +20,11 @@ export const UserProvider: React.FunctionComponent<UserProviderProps> = ({
     useEffect(() => {
         const unsubscribe = auth.onAuthStateChanged(async (firebaseUser) => {
             if (firebaseUser != null) {
-                setUser(await getUser(firebaseUser?.email));
+                const fireUser: void | User | null = await getUser(firebaseUser?.email);
+                setUser(fireUser);
+                if (!fireUser) {
+                    logOut();
+                }
             } else {
                 setUser(null);
             }

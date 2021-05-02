@@ -12,7 +12,7 @@ export const getUser = async (email?: string | null | undefined): Promise<void |
         .withConverter(UserConverter)
         .get()
         .then((doc: firebase.firestore.QuerySnapshot<User>) => {
-            if (doc.size > 1) {
+            if (doc.size === 0 || doc.size > 1) {
                 return null;
             }
             return doc.docs[0].data();
